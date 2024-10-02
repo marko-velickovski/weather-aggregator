@@ -31,7 +31,13 @@ class WeatherMasterXLocationSerializer(serializers.ModelSerializer):
 class WeatherMasterXReadingsSerializer(serializers.ModelSerializer):
     class Meta:
         model = WeatherMasterXReadings
-        fields = "__all__"
+        fields = [
+            "temp_fahrenheit",
+            "humidity_percent",
+            "pressure_hpa",
+            "uv_index",
+            "rain_mm",
+        ]
 
 
 class WeatherMasterXSerializer(serializers.ModelSerializer):
